@@ -1,0 +1,111 @@
+.panel {
+  background: var(--surface);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.section { border-bottom: 1px solid var(--border); padding-bottom: 12px; }
+.panelTitle {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  padding: 16px 16px 8px;
+  text-transform: uppercase;
+}
+.searchBox {
+  margin: 0 12px 10px;
+  position: relative;
+}
+.searchBox input {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 7px 10px 7px 28px;
+  color: var(--text);
+  font-size: 12px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.searchBox input:focus { border-color: var(--accent); }
+.searchIcon {
+  position: absolute;
+  left: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--muted);
+  font-size: 14px;
+  pointer-events: none;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  padding: 0 12px;
+}
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: grab;
+  transition: all 0.2s;
+  user-select: none;
+}
+.card:hover {
+  border-color: var(--accent);
+  background: rgba(240, 165, 0, 0.06);
+  transform: translateY(-1px);
+}
+.card:active { cursor: grabbing; transform: scale(0.96); }
+.icon { font-size: 20px; margin-bottom: 4px; }
+.label { font-size: 11px; font-weight: 500; color: var(--muted); }
+
+.stepList { padding: 0 12px; }
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s;
+}
+.stepItem:hover { background: var(--surface2); border-color: var(--border); }
+.stepItem.active { background: rgba(240, 165, 0, 0.1); border-color: rgba(240, 165, 0, 0.3); }
+.stepNum {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+.stepItem.active .stepNum { background: var(--accent); color: #000; }
+.stepName { font-size: 13px; font-weight: 500; flex: 1; }
+.stepCount { font-size: 11px; color: var(--muted); }
+.addStepBtn {
+  width: calc(100% - 24px);
+  margin: 8px 12px 0;
+  padding: 8px;
+  background: var(--surface2);
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.addStepBtn:hover { border-color: var(--accent); color: var(--accent); }

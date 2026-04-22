@@ -1,0 +1,4 @@
+[build]
+  base = "formcraft/client"
+  command = "npm install && npx vite build"
+  publish = "formcraft/client/dist"
